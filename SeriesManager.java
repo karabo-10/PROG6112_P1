@@ -17,7 +17,7 @@ public void CaptureSeries() {
             sc.nextLine(); // clear buffer
             break;
         } else {
-            System.out.println("❌ Invalid input. Please enter numbers only.");
+            System.out.println(" Invalid input. Please enter numbers only.");
             sc.next(); // clear invalid input
         }
     }
@@ -25,7 +25,7 @@ public void CaptureSeries() {
     System.out.print("Enter series name: ");
     String name = sc.nextLine();
 
-    // 🔎 Check duplicates (ID + Name)
+    //  Check duplicates (ID + Name)
     for (SeriesModel s : seriesList) {
         if (s.getSeriesId().equals(String.valueOf(id)) &&
             s.getSeriesName().equalsIgnoreCase(name)) {
@@ -45,7 +45,7 @@ public void CaptureSeries() {
                 System.out.println("Invalid range. Try again.");
             }
         } else {
-            System.out.println("❌ Enter numbers only!");
+            System.out.println(" Enter numbers only!");
             sc.next(); // clear invalid input
         }
     }
@@ -59,16 +59,16 @@ public void CaptureSeries() {
             if (episodes > 0) {
                 break;
             } else {
-                System.out.println("❌ Episodes must be greater than 0.");
+                System.out.println(" Episodes must be greater than 0.");
             }
         } else {
-            System.out.println("❌ Invalid input. Please enter numbers only.");
+            System.out.println(" Invalid input. Please enter numbers only.");
             sc.next(); // clear invalid input
         }
     }
 
     seriesList.add(new SeriesModel(String.valueOf(id), name, age, episodes));
-    System.out.println("✅ Series processed successfully!");
+    System.out.println(" Series processed successfully!");
 }
     // 2. Search
     public void SearchSeries() {
@@ -114,7 +114,7 @@ public void CaptureSeries() {
         for (SeriesModel s : seriesList) {
             if (s.getSeriesId().equals(id)) {
                 seriesList.remove(s);
-                System.out.println("🗑️ Deleted series ID: " + id);
+                System.out.println("🗑 Deleted series ID: " + id);
                 return;
             }
         }
@@ -136,4 +136,5 @@ public void CaptureSeries() {
             }
         }
     }
+
 }
