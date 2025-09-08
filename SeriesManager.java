@@ -25,7 +25,7 @@ public void CaptureSeries() {
     System.out.print("Enter series name: ");
     String name = sc.nextLine();
 
-    //  Check duplicates (ID + Name)
+    // Check duplicates (ID + Name)
     for (SeriesModel s : seriesList) {
         if (s.getSeriesId().equals(String.valueOf(id)) &&
             s.getSeriesName().equalsIgnoreCase(name)) {
@@ -136,5 +136,4 @@ public void CaptureSeries() {
             }
         }
     }
-
 }
