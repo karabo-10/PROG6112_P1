@@ -31,9 +31,31 @@ public class SeriesModel {
         return numberOfEpisodes;
     }
 
-    // Setter for updating age restriction
+    // Setters
+    public void setSeriesName(String seriesName) {
+        this.seriesName = seriesName;
+    }
+
+    public void setNumberOfEpisodes(int numberOfEpisodes) {
+        this.numberOfEpisodes = numberOfEpisodes;
+    }
+
     public void setAgeRestriction(int ageRestriction) {
         this.ageRestriction = ageRestriction;
+    }
+
+    // Update all fields
+    public void updateSeries(String seriesName, int ageRestriction, int numberOfEpisodes) {
+        this.seriesName = seriesName;
+        this.ageRestriction = ageRestriction;
+        this.numberOfEpisodes = numberOfEpisodes;
+    }
+
+    // "Delete" series (simulate by resetting values)
+    public void deleteSeries() {
+        this.seriesName = null;
+        this.ageRestriction = 0;
+        this.numberOfEpisodes = 0;
     }
 
     // Display format
